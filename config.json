@@ -1,0 +1,88 @@
+{
+  "geo_targets": {
+    "states": ["Florida", "Michigan"],
+    "cities": ["Miami", "Orlando", "Tampa", "Jacksonville", "Fort Lauderdale", "Detroit", "Grand Rapids", "Warren", "Sterling Heights", "Ann Arbor", "Lansing", "Flint", "Dearborn", "Livonia", "Westland", "Troy"]
+  },
+  "platforms": {
+    "craigslist": {
+      "enabled": true,
+      "regions": ["miami", "orlando", "tampa", "jacksonville", "fortlauderdale", "detroit", "grandrapids", "annarbor", "lansing", "flint"],
+      "base_url": "https://{region}.craigslist.org/search/bfs",
+      "keywords": ["business for sale", "owner selling", "turnkey", "must sell"]
+    },
+    "bizbuysell": {
+      "enabled": true,
+      "base_url": "https://www.bizbuysell.com/businesses-for-sale",
+      "filters": ["owner selling", "no broker", "fsbo", "contact owner", "self-represented"]
+    },
+    "businessbroker": {
+      "enabled": true,
+      "base_url": "https://www.businessbroker.net/businesses-for-sale",
+      "filters": ["no broker", "owner listing", "motivated seller", "owner selling"]
+    },
+    "flippa": {
+      "enabled": true,
+      "base_url": "https://flippa.com/search",
+      "seller_type": "owner"
+    },
+    "facebook_marketplace": {
+      "enabled": false,
+      "keywords": ["business for sale", "turnkey", "owner selling", "must sell", "cash only"],
+      "note": "Requires headless browser - disabled for initial version"
+    }
+  },
+  "filters": {
+    "price": {
+      "min": 10000,
+      "max": 1000000
+    },
+    "revenue": {
+      "min": 50000
+    },
+    "cash_flow": {
+      "min": 25000
+    },
+    "industries": [
+      "car wash",
+      "detailing", 
+      "cleaning",
+      "janitorial",
+      "landscaping",
+      "HVAC",
+      "plumbing",
+      "ecommerce",
+      "dropshipping",
+      "amazon fba",
+      "restaurant",
+      "takeout",
+      "pizza",
+      "coffee",
+      "convenience store",
+      "gas station",
+      "laundromat",
+      "food truck",
+      "mobile business",
+      "vending"
+    ]
+  },
+  "lead_scoring": {
+    "retiring": 2,
+    "must sell": 2,
+    "no broker": 2,
+    "turnkey": 1.5,
+    "low overhead": 1,
+    "absentee owner": 1,
+    "owner operated": 1,
+    "motivated seller": 1.5,
+    "cash only": 1,
+    "missing_contact": -1,
+    "price_above_max": -2
+  },
+  "scraper_settings": {
+    "max_leads_per_run": 50,
+    "request_delay": 2,
+    "timeout": 30,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+  }
+}
+
